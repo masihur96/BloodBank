@@ -18,6 +18,8 @@ import android.widget.TextSwitcher;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
+import com.example.bloodbank.SignUpTask.SignUpActivity;
+
 public class SplashScreen extends AppCompatActivity {
 
 
@@ -43,6 +45,7 @@ public class SplashScreen extends AppCompatActivity {
 
 
         cardView = findViewById(R.id.mainCardView);
+        cardView.setCardBackgroundColor(getResources().getColor(R.color.red));
         boldTextSwitcher = findViewById(R.id.splash_bold_text);
         textSwitcher = findViewById(R.id.textSwitcher);
 
@@ -61,11 +64,8 @@ public class SplashScreen extends AppCompatActivity {
             }
         });
 
-
-
         boldTextSwitcher.setFactory(new ViewSwitcher.ViewFactory() {
-            @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
-            @SuppressLint({"ResourceAsColor", "RtlHardcoded", "WrongConstant"})
+            @SuppressLint({"ResourceAsColor"})
             @Override
             public View makeView() {
                 TextView textView = new TextView(SplashScreen.this);
@@ -116,7 +116,7 @@ public class SplashScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(SplashScreen.this,MainActivity.class));
+                startActivity(new Intent(SplashScreen.this, SignUpActivity.class));
 
             }
         });

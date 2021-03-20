@@ -1,112 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingLeft="@dimen/_10sdp"
+    android:paddingRight="@dimen/_10sdp"
     android:orientation="vertical"
     tools:context=".SplashScreen">
 
     <ImageSwitcher
         android:id="@+id/imageSwitcher"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/mainCardView"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_250sdp" />
-
-
-
 
 
     <androidx.cardview.widget.CardView
         android:id="@+id/mainCardView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:cardBackgroundColor="#CA1818"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageSwitcher"
+        app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="@dimen/_30sdp"
-        android:layout_below="@id/imageSwitcher">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageSwitcher">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:padding="@dimen/_20sdp"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_20sdp">
 
             <LinearLayout
                 android:id="@+id/screenoneLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:weightSum="4"
                 android:gravity="center_horizontal"
-
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="4">
 
                 <TextSwitcher
+                    android:id="@+id/splash_bold_text"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="3"
                     android:layout_gravity="center"
-                    android:id="@+id/splash_bold_text"/>
+                    android:layout_weight="3.5" />
 
                 <ImageView
-                    android:layout_weight=".5"
                     android:layout_width="0dp"
-                    android:layout_gravity="left"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/logo_icon_white"/>
-
+                    android:layout_gravity="left"
+                    android:layout_weight=".5"
+                    android:src="@drawable/logo_icon_white" />
 
 
             </LinearLayout>
 
             <TextSwitcher
-                android:layout_weight="1"
                 android:id="@+id/textSwitcher"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
+                android:layout_height="wrap_content"
                 android:layout_below="@id/screenoneLayout"
                 android:layout_marginTop="@dimen/_2sdp"
                 android:layout_marginBottom="@dimen/_5sdp"
+                android:gravity="center"
                 android:padding="@dimen/_5sdp"
                 android:textSize="@dimen/_30sdp" />
 
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                app:cardCornerRadius="@dimen/_30sdp"
-                android:layout_centerInParent="true">
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
-                    android:background="@color/white"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/next_button_design"
+                    android:layout_below="@id/textSwitcher"
+                    android:layout_centerInParent="true"
                     android:paddingLeft="@dimen/_20sdp"
-                    android:paddingRight="@dimen/_20sdp"
-                    android:layout_margin="@dimen/_10sdp"
-                    android:layout_height="wrap_content">
+                    android:backgroundTint="@color/white"
+                    android:paddingRight="@dimen/_20sdp">
+
                     <Button
                         android:id="@+id/nextButtonId"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/black"
-                        android:textSize="@dimen/_20sdp"
+                        android:backgroundTint="@color/white"
+                        android:text="Next"
                         android:textAllCaps="false"
-                        android:text="Next"/>
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_20sdp" />
 
                     <Button
                         android:id="@+id/startButtonId"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/black"
-                        android:visibility="gone"
-                        android:textSize="@dimen/_20sdp"
+                        android:backgroundTint="@color/white"
+                        android:text="Start"
                         android:textAllCaps="false"
-                        android:text="Start"/>
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_20sdp"
+                        android:visibility="gone" />
+
 
                 </RelativeLayout>
 
 
-            </androidx.cardview.widget.CardView>
 
 
 
@@ -115,6 +118,6 @@
 
 
 
-    
 
-</RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
