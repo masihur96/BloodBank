@@ -5,13 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageSwitcher;
-
-import com.example.bloodbank.SignUpTask.LoginActivity;
+import android.widget.TextView;
 
 public class WelcomeActivity extends AppCompatActivity {
-    private Button startJournyButton;
+    private TextView startJournyButton;
     private ImageSwitcher imageSwitcher;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

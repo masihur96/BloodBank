@@ -7,55 +7,52 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/white"
-        >
+   <androidx.appcompat.widget.Toolbar
+       android:layout_width="match_parent"
+       android:layout_height="?attr/actionBarSize"
+       android:id="@+id/toolBar">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:weightSum="5"
-            android:layout_height="match_parent">
-            <ImageView
-                android:id="@+id/backArrow"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:src="@drawable/ic_baseline_arrow_back_24"/>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:weightSum="4"
+           android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:text="Search"
-                android:textStyle="bold"
-                android:textSize="@dimen/_20sdp"
-                android:layout_gravity="center"
-                android:textColor="@color/black"
-            />
+           <ImageView
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="wrap_content"
+               android:layout_gravity="left|center"
+               android:src="@drawable/ic_baseline_arrow_back_24"/>
 
+           <TextView
+               android:layout_width="0dp"
+               android:layout_weight="2"
+               android:layout_height="wrap_content"
+               android:text="Search"
 
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:src="@drawable/ic_baseline_gps_fixed_24"/>
+               android:layout_gravity="center"
+               android:textSize="@dimen/_18sdp"
+               android:textStyle="bold"/>
+
+           <ImageView
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:src="@drawable/ic_baseline_gps_fixed_24"/>
 
 
 
-        </LinearLayout>
+       </LinearLayout>
 
 
 
-    </androidx.appcompat.widget.Toolbar>
+
+   </androidx.appcompat.widget.Toolbar>
 
     <RelativeLayout
-        android:layout_below="@id/toolbar"
+        android:layout_below="@id/toolBar"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -134,7 +131,7 @@
                         android:layout_margin="@dimen/_10sdp"
                         android:textAlignment="center"
                         android:padding="@dimen/_10sdp"
-                        android:background="@drawable/next_button_design"
+                        android:background="@drawable/text_view_border"
                         android:text="Blood Bank"
                         android:gravity="center_horizontal" />
 
@@ -145,7 +142,7 @@
                         android:layout_margin="@dimen/_10sdp"
                         android:padding="@dimen/_10sdp"
                         android:textAlignment="center"
-                        android:background="@drawable/next_button_design"
+                        android:background="@drawable/text_view_border"
                         android:text="Local Clinic"
                         android:gravity="center_horizontal" />
 
@@ -154,14 +151,15 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:gravity="right"
+                        android:gravity="center"
                         android:layout_gravity="center"
                         android:orientation="vertical">
 
                         <Spinner
-                            android:id="@+id/spinerId"
+                            android:id="@+id/spinnerId"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            android:layout_height="wrap_content"
+                            />
 
                         <TextView
                             android:layout_width="wrap_content"

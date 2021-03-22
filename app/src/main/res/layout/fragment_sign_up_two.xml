@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="@dimen/_5sdp"
+    android:layout_marginRight="@dimen/_25sdp"
+    android:layout_marginLeft="@dimen/_25sdp"
     tools:context=".SignUpTask.SignUpOne">
 
 
@@ -29,55 +30,32 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/titleTV"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/userNameCardView"
+        app:layout_constraintBottom_toTopOf="@id/phoneET"
         android:text="Phone No"
         android:layout_marginTop="@dimen/_5sdp"
         android:textSize="@dimen/_20sdp"
         android:textColor="@color/black"
         />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/userNameCardView"
+    <EditText
+        android:id="@+id/phoneET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/phoneTV"
-        app:layout_constraintRight_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/altTV"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:cardCornerRadius="@dimen/_20sdp"
-        android:backgroundTint="@color/button_background"
-        >
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/eddit_text_background"
+        android:hint="01740719204"
+        android:padding="@dimen/_20sdp"
+        app:layout_constraintBottom_toTopOf="@id/altTV"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_5sdp">
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                >
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/phoneET"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:imeOptions="actionNext"
-                    android:inputType="text"
-                    />
-
-            </com.google.android.material.textfield.TextInputLayout>
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
     <TextView
         android:id="@+id/altTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/userNameCardView"
+        app:layout_constraintTop_toBottomOf="@id/phoneET"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/emailCardView"
+        app:layout_constraintBottom_toTopOf="@id/altET"
 
         android:text="Alternative Phone No"
         android:layout_marginTop="@dimen/_10sdp"
@@ -85,100 +63,52 @@
         android:textColor="@color/black"
         />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/emailCardView"
+
+
+
+    <EditText
+        android:id="@+id/altET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/altTV"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/socialTV"
-        app:cardCornerRadius="@dimen/_20sdp"
-        android:backgroundTint="@color/button_background"
-        >
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_5sdp">
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                >
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/altET"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:imeOptions="actionNext"
-                    android:inputType="textEmailAddress"
-                    />
-
-            </com.google.android.material.textfield.TextInputLayout>
+        android:background="@drawable/eddit_text_background"
+        android:hint="01740719204"
+        android:padding="@dimen/_20sdp"
+        app:layout_constraintBottom_toTopOf="@id/socialTV"/>
 
 
-
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
     <TextView
         android:id="@+id/socialTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/emailCardView"
+        app:layout_constraintTop_toBottomOf="@id/altET"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/paaworsCV"
+        app:layout_constraintBottom_toTopOf="@id/socialET"
         android:text="Social (Optional)"
         android:layout_marginTop="@dimen/_10sdp"
         android:textSize="@dimen/_18sdp"
         android:textColor="@color/black"
         />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/paaworsCV"
+    <EditText
+        android:id="@+id/socialET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/socialTV"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/descriptionTV"
-        app:cardCornerRadius="@dimen/_20sdp"
-        android:backgroundTint="@color/button_background"
-        android:layout_below="@id/socialTV">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_5sdp">
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:passwordToggleEnabled="true"
-                >
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/socialET"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:imeOptions="actionNext"
-                    android:inputType="textPassword"
-                    />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
+        android:background="@drawable/eddit_text_background"
+        android:hint="01740719204"
+        android:padding="@dimen/_20sdp"
+        app:layout_constraintBottom_toTopOf="@id/descriptionTV"/>
 
     <TextView
         android:id="@+id/descriptionTV"
-        android:layout_below="@id/paaworsCV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/paaworsCV"
+        app:layout_constraintTop_toBottomOf="@id/socialET"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@id/nextsignUpTwo"
@@ -189,7 +119,9 @@
         />
 
 
-    <Button
+
+
+    <TextView
         android:id="@+id/nextsignUpTwo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -197,11 +129,16 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:backgroundTint="@color/red"
-        android:textAllCaps="false"
-        android:textSize="@dimen/_20sdp"
-        android:padding="@dimen/_5sdp"
-        android:text="Next"/>
-
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:textColor="@color/white"
+        android:background="@drawable/next_button_design"
+        android:text="Next"
+        android:textSize="@dimen/_15sdp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

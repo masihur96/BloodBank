@@ -4,11 +4,11 @@
         <shape>
             <gradient
                 android:angle="270"
-                android:endColor="@color/red"
-                android:startColor="@color/red"/>
+                android:endColor="@color/button_background"
+                android:startColor="@color/button_background"/>
             <stroke
                 android:width="4dp"
-                android:color="@color/red"/>
+                android:color="@color/button_background"/>
             <corners
                 android:radius="@dimen/_15sdp"/>
             <padding

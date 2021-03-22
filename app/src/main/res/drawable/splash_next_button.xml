@@ -4,11 +4,8 @@
         <shape>
             <gradient
                 android:angle="270"
-                android:endColor="@color/red"
-                android:startColor="@color/red"/>
-            <stroke
-                android:width="4dp"
-                android:color="@color/red"/>
+                android:endColor="@color/white"
+                android:startColor="@color/white"/>
             <corners
                 android:radius="@dimen/_15sdp"/>
             <padding

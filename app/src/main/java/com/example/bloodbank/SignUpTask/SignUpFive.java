@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.bloodbank.R;
 
@@ -16,7 +17,7 @@ import com.example.bloodbank.R;
 public class SignUpFive extends Fragment {
 
 
-    public Button nextButonFive;
+    public TextView nextButonFive;
     public SignUpFive() {
         // Required empty public constructor
     }

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="@dimen/_5sdp"
+    android:layout_marginRight="@dimen/_25sdp"
+    android:layout_marginLeft="@dimen/_25sdp"
     tools:context=".SignUpTask.SignUpOne">
 
 
@@ -13,6 +14,9 @@
     <TextView
         android:id="@+id/titleTV"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/streetAddressTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Where Do You Live"
@@ -21,156 +25,71 @@
         android:textStyle="bold"/>
 
     <TextView
-        android:id="@+id/usernameTV"
+        android:id="@+id/streetAddressTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@id/titleTV"
-        app:layout_constraintTop_toTopOf="@id/streeetAddressCV"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_below="@id/titleTV"
         android:text="Street Address"
         android:layout_marginTop="@dimen/_5sdp"
         android:textSize="@dimen/_20sdp"
         android:textColor="@color/black"
         />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/streeetAddressCV"
+    <EditText
+        android:id="@+id/streetAddressET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@id/usernameTV"
-        app:layout_constraintTop_toTopOf="@id/cityTV"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:cardCornerRadius="@dimen/_20sdp"
-        android:backgroundTint="@color/button_background"
-        >
+        android:layout_below="@id/streetAddressTV"
+        android:background="@drawable/eddit_text_background"
+        android:padding="@dimen/_20sdp"
+        android:hint="Dhaka"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_5sdp">
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                >
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/addessET"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:imeOptions="actionNext"
-                    android:inputType="text"
-                    />
-
-            </com.google.android.material.textfield.TextInputLayout>
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
     <TextView
         android:id="@+id/cityTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@id/streeetAddressCV"
-        app:layout_constraintTop_toTopOf="@id/cityCV"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_below="@id/streetAddressET"
         android:text="City"
         android:layout_marginTop="@dimen/_10sdp"
         android:textSize="@dimen/_18sdp"
         android:textColor="@color/black"
         />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cityCV"
+    <EditText
+        android:id="@+id/cityET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@id/cityTV"
-        app:layout_constraintTop_toTopOf="@id/postalCodeTV"
-        app:cardCornerRadius="@dimen/_20sdp"
-        android:backgroundTint="@color/button_background"
-        >
+        android:layout_below="@id/cityTV"
+        android:background="@drawable/eddit_text_background"
+        android:hint="Jhone"
+        android:padding="@dimen/_20sdp"
+        />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_5sdp">
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                >
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/cityET"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:imeOptions="actionNext"
-                    android:inputType="textEmailAddress"
-                    />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
     <TextView
         android:id="@+id/postalCodeTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@id/cityCV"
-        app:layout_constraintTop_toTopOf="@id/postalCodeCV"
-        app:layout_constraintLeft_toLeftOf="parent"
+android:layout_below="@id/cityET"
         android:text="Postal Code"
         android:layout_marginTop="@dimen/_10sdp"
         android:textSize="@dimen/_18sdp"
         android:textColor="@color/black"
-        android:layout_below="@id/cityCV"/>
+        />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/postalCodeCV"
+    <EditText
+        android:id="@+id/postalCodeET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@id/postalCodeTV"
-        app:layout_constraintTop_toTopOf="@id/descriptionTV"
-        app:cardCornerRadius="@dimen/_20sdp"
-        android:backgroundTint="@color/button_background"
-        android:layout_below="@id/postalCodeTV">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_5sdp">
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/postalCodeET"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:passwordToggleEnabled="true"
-                >
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextValue"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:imeOptions="actionNext"
-                    android:inputType="textPassword"
-                    />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
+        android:layout_below="@id/postalCodeTV"
+        android:background="@drawable/eddit_text_background"
+        android:hint="Jhone"
+        android:padding="@dimen/_20sdp"
+        />
 
     <TextView
         android:id="@+id/descriptionTV"
-        android:layout_below="@id/postalCodeCV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@id/postalCodeCV"
-        app:layout_constraintTop_toTopOf="@id/nextsignUpSix"
+        android:layout_below="@id/postalCodeET"
         android:gravity="center"
         android:textSize="@dimen/_16sdp"
         android:padding="@dimen/_10sdp"
@@ -178,16 +97,21 @@
         />
 
 
-    <Button
+    <TextView
         android:id="@+id/nextsignUpSix"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:backgroundTint="@color/red"
-        android:textAllCaps="false"
-        android:textSize="@dimen/_20sdp"
-        android:padding="@dimen/_5sdp"
-        android:text="Next"/>
+        android:layout_below="@id/descriptionTV"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:textColor="@color/white"
+        android:background="@drawable/next_button_design"
+        android:text="Next"
+        android:textSize="@dimen/_15sdp"/>
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

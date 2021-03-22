@@ -25,7 +25,7 @@ public class SplashScreen extends AppCompatActivity {
 
     private ImageSwitcher imageSwitcher;
     public TextSwitcher textSwitcher, boldTextSwitcher;
-    private Button nextButton,startButton;
+    private TextView nextButton,startButton;
     private CardView cardView;
 
     String[] splashBoldText = {"Save Life",};

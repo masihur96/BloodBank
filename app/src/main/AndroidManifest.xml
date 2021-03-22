@@ -11,18 +11,14 @@
         android:theme="@style/Theme.BloodBank">
         <activity android:name=".SignUpTask.LoginActivity"></activity>
         <activity android:name=".WelcomeActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity android:name=".SignUpTask.SignUpActivity" />
-        <activity android:name=".SplashScreen">
-
-        </activity>
+        <activity android:name=".SplashScreen" />
         <activity android:name=".MainActivity" />
 
         <meta-data
@@ -30,12 +26,11 @@
             android:value="@integer/google_play_services_version" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyD9Y18xunj--YCfzn6QrNeJeVO6UWebcBM"/>
+            android:value="AIzaSyD9Y18xunj--YCfzn6QrNeJeVO6UWebcBM" />
 
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
-
     </application>
 
 </manifest>
