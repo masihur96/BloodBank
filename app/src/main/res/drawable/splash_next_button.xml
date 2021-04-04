@@ -9,10 +9,9 @@
             <corners
                 android:radius="@dimen/_15sdp"/>
             <padding
-                android:bottom="10dp"
                 android:left="10dp"
                 android:right="10dp"
-                android:top="10dp"/>
+                />
         </shape>
     </item>
 </selector>

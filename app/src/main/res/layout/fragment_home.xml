@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginRight="@dimen/_25sdp"
+    android:layout_marginLeft="@dimen/_25sdp"
+    tools:context=".HomeFragment">
+<FrameLayout
+    android:id="@+id/homeFrameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="invisible"/>
+    <LinearLayout
+        android:id="@+id/campainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="4"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:textStyle="bold"
+            android:text="Campaign"
+            android:textSize="@dimen/_20sdp"
+            android:textColor="@color/black"/>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:textStyle="bold"
+                android:text="Available"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_alignParentRight="true"
+                android:text="Available at 3 Day"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/black"/>
+        </RelativeLayout>
+
+
+
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchButton"
+            android:layout_weight=".5"
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"/>
+
+
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sliderCV"
+        app:cardCornerRadius="6dp"
+        android:layout_margin="16dp"
+        android:layout_below="@id/campainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.smarteist.autoimageslider.SliderView
+            android:id="@+id/imageSlider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            app:sliderAnimationDuration="600"
+            app:sliderAutoCycleDirection="back_and_forth"
+            app:sliderAutoCycleEnabled="true"
+            app:sliderIndicatorAnimationDuration="600"
+            app:sliderIndicatorGravity="center_horizontal|bottom"
+            app:sliderIndicatorMargin="15dp"
+            app:sliderIndicatorOrientation="horizontal"
+            app:sliderIndicatorPadding="3dp"
+            app:sliderIndicatorRadius="2dp"
+            app:sliderIndicatorSelectedColor="#5A5A5A"
+            app:sliderIndicatorUnselectedColor="#FFF"
+            app:sliderScrollTimeInSec="1"
+            app:sliderStartAutoCycle="true" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/menuTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sliderCV"
+        android:text="Menu"
+        android:textSize="@dimen/_20sdp"
+        android:textStyle="bold"
+        />
+
+    <LinearLayout
+    android:id="@+id/menuItemLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/menuTV"
+    android:weightSum="4"
+    android:orientation="horizontal">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="@dimen/_80sdp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/bookCIV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/book_icon"
+                app:civ_border_color="@color/button_background"
+                android:padding="@dimen/_15sdp"
+                app:civ_border_width="@dimen/_1sdp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom|center"
+            android:text="Book"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+
+        android:layout_height="@dimen/_80sdp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/donationCIV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/donation_icon"
+            app:civ_border_color="@color/button_background"
+            android:padding="@dimen/_15sdp"
+            app:civ_border_width="@dimen/_1sdp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom|center"
+            android:text="Donation"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="@dimen/_80sdp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/donorsCIV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/donor_icon"
+            app:civ_border_color="@color/button_background"
+            android:padding="@dimen/_15sdp"
+            app:civ_border_width="@dimen/_1sdp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom|center"
+            android:text="Donors" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="@dimen/_80sdp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/myList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/list_icon"
+            app:civ_border_color="@color/button_background"
+            android:padding="@dimen/_15sdp"
+            app:civ_border_width="@dimen/_1sdp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom|center"
+
+            android:text="My List"/>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
+
+
+    <TextView
+        android:id="@+id/requestTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/menuItemLayout"
+        android:text="Request"
+        android:textSize="@dimen/_20sdp"
+        android:textStyle="bold"
+        />
+
+    <LinearLayout
+        android:id="@+id/requestLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/requestTV"
+        android:weightSum="4"
+        android:orientation="horizontal">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/_80sdp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/urgentRequestCIV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/urgent_request"
+                app:civ_border_color="@color/button_background"
+                android:padding="@dimen/_15sdp"
+                app:civ_border_width="@dimen/_1sdp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom|center"
+                android:text="Urgent Request"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+
+            android:layout_height="@dimen/_80sdp">
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/MyRequestCIV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/my_request"
+                app:civ_border_color="@color/button_background"
+                android:padding="@dimen/_15sdp"
+                app:civ_border_width="@dimen/_1sdp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom|center"
+                android:text="My Request"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/_80sdp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/postRequestCIV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/posr_request"
+                app:civ_border_color="@color/button_background"
+                android:padding="@dimen/_15sdp"
+                app:civ_border_width="@dimen/_1sdp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom|center"
+                android:text="Post Request"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/statisticTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/requestLayout"
+        android:text="Statistic"
+        android:textSize="@dimen/_20sdp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/statisticNewTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/statisticTV"
+        android:text="New Patient"
+        android:textSize="@dimen/_10sdp"
+        android:textStyle="bold"
+        />
+
+    <ImageView
+        android:id="@+id/statisticIV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/statisticNewTV"
+        android:src="@drawable/statistic"/>
+
+</RelativeLayout>

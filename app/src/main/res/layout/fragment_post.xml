@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginRight="@dimen/_25sdp"
+    android:layout_marginLeft="@dimen/_25sdp"
+    tools:context=".PostFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/postToolBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:src="@drawable/ic_baseline_arrow_back_24"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="Post A Request"
+
+                android:layout_gravity="center"
+                android:textSize="@dimen/_18sdp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/bloodRequestTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Blood Request"
+        android:textSize="@dimen/_25sdp"
+        app:layout_constraintTop_toBottomOf="@id/postToolBar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/areaTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/bloodRequestTV"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/areaEt"
+        android:text="Area or City"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:textSize="@dimen/_20sdp"
+        android:textColor="@color/black"
+        />
+
+
+
+    <EditText
+        android:id="@+id/areaEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/areaTV"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/eddit_text_background"
+        android:drawableRight="@drawable/ic_baseline_near_me_24"
+        android:hint="Dhaka"
+        android:padding="@dimen/_20sdp"
+        app:layout_constraintBottom_toTopOf="@id/bloodGroupTV"/>
+
+
+    <TextView
+        android:id="@+id/bloodGroupTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/areaEt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bloodGroupSpinnerId"
+        android:text="Blood Group"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:textSize="@dimen/_20sdp"
+        android:textColor="@color/black"
+        />
+
+
+    <Spinner
+        android:id="@+id/bloodGroupSpinnerId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/bloodGroupTV"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:autofillHints="A+"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/I_am_here_TV"
+        />
+
+
+    <TextView
+        android:id="@+id/I_am_here_TV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/bloodGroupSpinnerId"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/iAmSpinnerId"
+        android:text="I am his / her"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:textSize="@dimen/_20sdp"
+        android:textColor="@color/black"
+        />
+
+    <Spinner
+        android:id="@+id/iAmSpinnerId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/I_am_here_TV"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:autofillHints="A+"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/layoutCheckBox"
+        />
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/layoutCheckBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/iAmSpinnerId"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/publishBttn"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Urgent"
+           />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toRightOf="@id/checkBox"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_weight="1"
+            android:gravity="right|center"
+            android:text="Schedule"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/publishBttn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/layoutCheckBox"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:textColor="@color/white"
+        android:background="@drawable/next_button_design"
+        android:text="Publish"
+        android:textSize="@dimen/_15sdp"/>
+
+
+    <TextView
+        android:id="@+id/historyTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Recent History"
+        app:layout_constraintTop_toBottomOf="@id/publishBttn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/historyScrollView"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:id="@+id/historyScrollView"
+        app:layout_constraintTop_toBottomOf="@id/historyTV"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

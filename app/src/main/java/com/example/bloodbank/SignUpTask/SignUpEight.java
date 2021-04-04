@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.bloodbank.HomeActivity;
 import com.example.bloodbank.MainActivity;
 import com.example.bloodbank.R;
 
@@ -37,7 +38,7 @@ public class SignUpEight extends Fragment {
             public void onClick(View v) {
 
 
-                startActivity(new Intent(getContext(), MainActivity.class));
+                startActivity(new Intent(getContext(), HomeActivity.class));
 
 
             }
