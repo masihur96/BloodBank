@@ -5,11 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageSwitcher;
 import android.widget.TextView;
 
 public class WelcomeActivity extends AppCompatActivity {
-    private TextView startJournyButton;
+    private Button startJournyButton;
     private ImageSwitcher imageSwitcher;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

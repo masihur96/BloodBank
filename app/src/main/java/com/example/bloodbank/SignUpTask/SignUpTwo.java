@@ -15,7 +15,7 @@ import com.example.bloodbank.R;
 
 
 public class SignUpTwo extends Fragment {
-    public TextView nextButonTwo;
+    public Button nextButonTwo;
     public SignUpTwo() {
         // Required empty public constructor
     }

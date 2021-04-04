@@ -22,7 +22,7 @@
         android:text="How Old Are You ?"
         android:textSize="@dimen/_40sdp"
         android:textColor="@color/black"
-        android:textStyle="bold"/>
+        />
 
     <RelativeLayout
         android:id="@+id/groupLayout"
@@ -74,7 +74,7 @@
                 app:np_orientation="horizontal"
                 app:np_selectedTextColor="@color/black"
                 app:np_selectedTextSize="@dimen/_25sdp"
-                app:np_textColor="@color/button_background"
+                app:np_textColor="#AFACAC"
                 app:np_textSize="@dimen/_20sdp"
                 app:np_value="5" />
 
@@ -92,7 +92,7 @@
                 app:np_orientation="horizontal"
                 app:np_selectedTextColor="@color/black"
                 app:np_selectedTextSize="@dimen/_25sdp"
-                app:np_textColor="@color/button_background"
+                app:np_textColor="#AFACAC"
                 app:np_textSize="@dimen/_15sdp"
                 />
 
@@ -123,7 +123,7 @@
         />
 
 
-    <TextView
+    <Button
         android:id="@+id/nextsignUpSeven"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

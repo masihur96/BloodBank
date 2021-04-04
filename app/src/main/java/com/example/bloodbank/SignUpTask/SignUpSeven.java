@@ -17,7 +17,7 @@ import com.example.bloodbank.R;
 
 public class SignUpSeven extends Fragment {
 
-    public TextView nextButonSeven;
+    public Button nextButonSeven;
 
     String[] data = {"January","February","March","April","May","June","July","August","September","Octobor","November","December"};
 

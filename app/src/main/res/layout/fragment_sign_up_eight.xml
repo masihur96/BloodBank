@@ -22,7 +22,7 @@
         android:text="You're almost done"
         android:textSize="@dimen/_40sdp"
         android:textColor="@color/black"
-        android:textStyle="bold"/>
+      />
 
     <RelativeLayout
         android:id="@+id/groupLayout"
@@ -39,7 +39,7 @@
 
 
             <ImageView
-                android:id="@+id/weightDown"
+                android:id="@+id/uploadPhoto"
                 android:layout_width="@dimen/_200sdp"
                 android:layout_height="@dimen/_200sdp"
                 android:src="@drawable/upload_photo"/>
@@ -63,7 +63,7 @@
         />
 
 
-    <TextView
+    <Button
         android:id="@+id/nextsignUpEight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

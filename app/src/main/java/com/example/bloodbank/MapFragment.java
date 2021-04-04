@@ -59,7 +59,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-                Toast.makeText(getContext(), "You are Selected : "+BloodGroupList.get(position), Toast.LENGTH_SHORT).show();
 
             }
 

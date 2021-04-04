@@ -20,9 +20,9 @@ tools:context=".SignUpTask.SignUpOne">
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="How Much Do You Weight"
-    android:textSize="@dimen/_35sdp"
+    android:textSize="@dimen/_30sdp"
     android:textColor="@color/black"
-    android:textStyle="bold"/>
+    />
 
 <RelativeLayout
     android:id="@+id/groupLayout"
@@ -74,7 +74,7 @@ tools:context=".SignUpTask.SignUpOne">
     />
 
 
-    <TextView
+    <Button
         android:id="@+id/nextsignUpFour"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

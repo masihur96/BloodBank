@@ -23,7 +23,7 @@
         android:text="What is your Blood Group"
         android:textSize="@dimen/_40sdp"
         android:textColor="@color/black"
-        android:textStyle="bold"/>
+        />
 
     <RelativeLayout
         android:id="@+id/groupLayout"
@@ -39,15 +39,15 @@
         <LinearLayout
             android:id="@+id/leayoutOne"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_60sdp"
+            android:layout_height="@dimen/_80sdp"
             android:padding="@dimen/_10sdp"
-            android:weightSum="5"
-            android:gravity="center"
+            android:weightSum="3"
             android:orientation="horizontal">
 
 
 
             <TextView
+                android:id="@+id/A_possitive"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
@@ -63,6 +63,7 @@
 
 
             <TextView
+                android:id="@+id/A_Negative"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:background="@drawable/group_button_border"
@@ -74,6 +75,7 @@
                 android:text="A-"
                 android:textSize="@dimen/_15sdp"/>
             <TextView
+                android:id="@+id/B_possitive"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
@@ -88,16 +90,16 @@
         <LinearLayout
             android:id="@+id/leayouttwo"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_60sdp"
+            android:layout_height="@dimen/_80sdp"
             android:padding="@dimen/_10sdp"
-            android:weightSum="5"
-            android:gravity="center"
+            android:weightSum="3"
             android:layout_below="@id/leayoutOne"
             android:orientation="horizontal">
 
 
 
             <TextView
+                android:id="@+id/B_Negative"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
@@ -112,6 +114,7 @@
 
 
             <TextView
+                android:id="@+id/O_possitive"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:background="@drawable/group_button_border"
@@ -123,6 +126,7 @@
                 android:text="O+"
                 android:textSize="@dimen/_15sdp"/>
             <TextView
+                android:id="@+id/O_Negative"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
@@ -136,15 +140,16 @@
         <LinearLayout
             android:layout_below="@id/leayouttwo"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_60sdp"
+            android:layout_height="@dimen/_80sdp"
             android:padding="@dimen/_10sdp"
-            android:weightSum="5"
-            android:gravity="center"
+            android:weightSum="3"
+
             android:orientation="horizontal">
 
 
 
             <TextView
+                android:id="@+id/AB_possitive"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
@@ -159,6 +164,7 @@
 
 
             <TextView
+                android:id="@+id/AB_Negative"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:background="@drawable/group_button_border"
@@ -169,15 +175,7 @@
                 android:layout_marginLeft="@dimen/_30sdp"
                 android:text="AB-"
                 android:textSize="@dimen/_15sdp"/>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:background="@drawable/group_button_border"
-                android:gravity="center"
-                android:textColor="@color/red"
-                android:text="B+"
-                android:textSize="@dimen/_15sdp"/>
+
 
         </LinearLayout>
 
@@ -201,7 +199,7 @@
         />
 
 
-    <TextView
+    <Button
         android:id="@+id/nextsignUpThree"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
